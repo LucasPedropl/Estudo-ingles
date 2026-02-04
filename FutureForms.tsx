@@ -105,7 +105,7 @@ const FutureForms = () => {
           <div className="bg-slate-700/50 p-5 rounded-xl border border-slate-600">
             <h4 className="text-purple-400 font-bold mb-3 uppercase tracking-wider">Contextos para GOING TO:</h4>
             <ul className="space-y-2 text-sm">
-              <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-purple-400"></span> "Have you decided?" (Se já decidiu -> Going to)</li>
+              <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-purple-400"></span> "Have you decided?" (Se já decidiu &rarr; Going to)</li>
               <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-purple-400"></span> "Look at..." (Evidência visual)</li>
               <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-purple-400"></span> Datas específicas com planos confirmados</li>
             </ul>
