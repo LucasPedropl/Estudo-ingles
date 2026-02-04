@@ -119,7 +119,7 @@ const CountableUncountable = () => {
         
         <section className="bg-indigo-50 rounded-2xl p-6 shadow-sm">
           <h3 className="text-lg font-bold text-indigo-900 mb-4 flex items-center gap-2">
-            <Package size={20} /> Tornando o Incontável -> Contável
+            <Package size={20} /> Tornando o Incontável &rarr; Contável
           </h3>
           <p className="text-sm text-indigo-800 mb-4">
             Usamos "Partitives" (recipientes ou medidas) para contar substantivos incontáveis.
