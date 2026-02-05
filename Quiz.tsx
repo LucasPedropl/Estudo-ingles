@@ -35,6 +35,30 @@ const questionsData = [
         answer: 'few', 
         explanation: '"Jars" is countable and plural. We use "Few".' 
     },
+    { 
+        id: 105, 
+        topic: 'Quantifiers', 
+        question: 'Specific Noun: "She gave me ___ advice."', 
+        options: ['an', 'some', 'many', 'a few'], 
+        answer: 'some', 
+        explanation: '"Advice" is UNCOUNTABLE in English. You cannot say "an advice" or "many advices".' 
+    },
+    { 
+        id: 106, 
+        topic: 'Quantifiers', 
+        question: 'Context: "The room looks empty. There is ___ furniture."', 
+        options: ['little', 'few', 'many', 'a lot'], 
+        answer: 'little', 
+        explanation: '"Furniture" is uncountable. "Little" means a small amount (almost nothing).' 
+    },
+    { 
+        id: 107, 
+        topic: 'Quantifiers', 
+        question: 'Interrogative: "How ___ stars can you see tonight?"', 
+        options: ['much', 'long', 'many', 'little'], 
+        answer: 'many', 
+        explanation: '"Stars" are countable. We ask questions with "How many".' 
+    },
 
     // --- TOPIC: Frequency Adverbs ---
     { 
@@ -52,6 +76,14 @@ const questionsData = [
         options: ['She doesn\'t always arrive late.', 'She always doesn\'t arrive late.', 'She doesn\'t arrive always late.', 'Always she doesn\'t arrive late.'], 
         answer: 'She doesn\'t always arrive late.', 
         explanation: 'In negative sentences, the adverb comes between the auxiliary (doesn\'t) and the main verb.' 
+    },
+    { 
+        id: 203, 
+        topic: 'Adverbs', 
+        question: 'Auxiliary Verbs: "I ___ been to Spain."', 
+        options: ['have never', 'never have', 'have ever', 'never am'], 
+        answer: 'have never', 
+        explanation: 'With Present Perfect, the adverb goes between the auxiliary (Have) and the main verb (Been).' 
     },
 
     // --- TOPIC: Comparatives & Superlatives ---
@@ -86,6 +118,30 @@ const questionsData = [
         options: ['least', 'less', 'fewer', 'minor'], 
         answer: 'less', 
         explanation: 'Comparative of inferiority uses "LESS + adjective + THAN".' 
+    },
+    { 
+        id: 305, 
+        topic: 'Comparatives', 
+        question: 'Irregular: "This movie is ___ than the previous one."', 
+        options: ['badder', 'worse', 'more bad', 'worst'], 
+        answer: 'worse', 
+        explanation: 'Bad is an irregular adjective. Bad -> Worse.' 
+    },
+    { 
+        id: 306, 
+        topic: 'Comparatives', 
+        question: 'Superlative: "He is the ___ student in the class."', 
+        options: ['goodest', 'most good', 'best', 'better'], 
+        answer: 'best', 
+        explanation: 'Good is irregular. Good -> Better -> The Best.' 
+    },
+    { 
+        id: 307, 
+        topic: 'Comparatives', 
+        question: 'Distance: "Pluto is ___ than Mars from the Sun."', 
+        options: ['farther', 'more far', 'farest', 'farer'], 
+        answer: 'farther', 
+        explanation: 'Far is irregular. Use "Farther" or "Further" for distance.' 
     },
 
     // --- TOPIC: Future (Will vs Going To) ---
@@ -137,6 +193,22 @@ const questionsData = [
         answer: 'leaves', 
         explanation: 'Official schedules (timetables) use Present Simple.' 
     },
+    { 
+        id: 407, 
+        topic: 'Future Forms', 
+        question: 'Uncertainty: "Maybe I ___ stay home tonight."', 
+        options: ['am going to', 'will', 'stay', 'staying'], 
+        answer: 'will', 
+        explanation: 'With words like "Maybe", "I think", "Probably", we usually use "Will".' 
+    },
+    { 
+        id: 408, 
+        topic: 'Future Forms', 
+        question: 'Promise: "I promise I ___ tell anyone your secret."', 
+        options: ['won\'t', 'not going to', 'don\'t', 'am not'], 
+        answer: 'won\'t', 
+        explanation: 'Promises always use "Will" (or "Won\'t" for negative).' 
+    },
 
     // --- TOPIC: Simple Past (Regular/Irregular) ---
     { 
@@ -170,6 +242,30 @@ const questionsData = [
         options: ['didn\'t went', 'didn\'t go', 'not went', 'don\'t went'], 
         answer: 'didn\'t go', 
         explanation: 'Negative in Simple Past: Didn\'t + Base Verb (Go).' 
+    },
+    { 
+        id: 505, 
+        topic: 'Simple Past', 
+        question: 'To Be: "When ___ you born?"', 
+        options: ['did', 'were', 'was', 'are'], 
+        answer: 'were', 
+        explanation: 'We always use "Were you born" (To Be), never "Did you born".' 
+    },
+    { 
+        id: 506, 
+        topic: 'Simple Past', 
+        question: 'Irregular: "She ___ (buy) a new computer."', 
+        options: ['buyed', 'bought', 'braught', 'buying'], 
+        answer: 'bought', 
+        explanation: 'Buy is irregular. Buy -> Bought.' 
+    },
+    { 
+        id: 507, 
+        topic: 'Simple Past', 
+        question: 'Question: "___ she ___ the email?"', 
+        options: ['Did / sent', 'Did / send', 'Does / send', 'Has / sent'], 
+        answer: 'Did / send', 
+        explanation: 'Question in past: Did + Subject + Base Verb.' 
     },
 
     // --- TOPIC: Present Perfect vs Simple Past ---
@@ -212,6 +308,22 @@ const questionsData = [
         options: ['lived', 'lives', 'has lived', 'is living'], 
         answer: 'has lived', 
         explanation: 'Action started in the past and continuing now (Since). Present Perfect.' 
+    },
+    { 
+        id: 606, 
+        topic: 'Pres. Perf. vs Past', 
+        question: 'Signal Word: "I haven\'t finished ___."', 
+        options: ['just', 'already', 'yet', 'ever'], 
+        answer: 'yet', 
+        explanation: '"Yet" is used at the end of negative sentences (meaning "until now").' 
+    },
+    { 
+        id: 607, 
+        topic: 'Pres. Perf. vs Past', 
+        question: 'They ___ (be) married for 20 years. (They are still married)', 
+        options: ['were', 'are', 'have been', 'had been'], 
+        answer: 'have been', 
+        explanation: 'Unfinished time (For 20 years) connecting past to present -> Present Perfect.' 
     },
 
     // --- TOPIC: Present Perfect Continuous ---
@@ -273,6 +385,14 @@ const questionsData = [
         answer: 'had already started', 
         explanation: 'The film started BEFORE we arrived. Past Perfect.' 
     },
+    { 
+        id: 805, 
+        topic: 'Past Tenses Mix', 
+        question: 'Cause/Effect: "She failed the test because she ___."', 
+        options: ['didn\'t studied', 'hasn\'t studied', 'hadn\'t studied', 'wasn\'t studying'], 
+        answer: 'hadn\'t studied', 
+        explanation: 'The cause (not studying) happened BEFORE the result (failed). Past Perfect.' 
+    },
 
     // --- TOPIC: Modals ---
     { 
@@ -306,6 +426,38 @@ const questionsData = [
         options: ['don\'t have to', 'mustn\'t', 'shouldn\'t', 'couldn\'t'], 
         answer: 'mustn\'t', 
         explanation: 'Mustn\'t indicates something is strictly prohibited.' 
+    },
+    { 
+        id: 905, 
+        topic: 'Modal Verbs', 
+        question: 'Lack of Obligation: "You ___ buy a ticket. The museum is free."', 
+        options: ['mustn\'t', 'don\'t have to', 'can\'t', 'shouldn\'t'], 
+        answer: 'don\'t have to', 
+        explanation: '"Don\'t have to" means it is not necessary, but you can do it if you want. "Mustn\'t" would mean it is forbidden.' 
+    },
+    { 
+        id: 906, 
+        topic: 'Modal Verbs', 
+        question: 'Formal Permission: "___ I come in, Sir?"', 
+        options: ['Can', 'May', 'Must', 'Will'], 
+        answer: 'May', 
+        explanation: '"May" is the most formal and polite way to ask for permission.' 
+    },
+    { 
+        id: 907, 
+        topic: 'Modal Verbs', 
+        question: 'Past Ability: "When I was 5, I ___ read."', 
+        options: ['can', 'could', 'should', 'would'], 
+        answer: 'could', 
+        explanation: '"Could" is the past form of "Can". Used for past abilities.' 
+    },
+    { 
+        id: 908, 
+        topic: 'Modal Verbs', 
+        question: 'Offer: "___ I help you with those bags?"', 
+        options: ['Will', 'Shall', 'Must', 'Would'], 
+        answer: 'Shall', 
+        explanation: '"Shall" is often used to make offers or suggestions with "I" or "We".' 
     },
 ];
 
