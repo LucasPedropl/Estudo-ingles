@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, BarChart3, GraduationCap, Scale, CalendarClock, Menu, Home, History, Infinity, Timer, Rewind, PlayCircle, ShieldAlert, BrainCircuit, BookA, BookKey } from 'lucide-react';
+import { BookOpen, BarChart3, GraduationCap, Scale, CalendarClock, Menu, Home, History, Infinity, Timer, Rewind, PlayCircle, ShieldAlert, BrainCircuit, BookA, BookKey, Layers, ChevronDown, ChevronRight } from 'lucide-react';
 import CountableUncountable from './CountableUncountable';
 import FrequencyAdverbs from './FrequencyAdverbs';
 import ComparativesSuperlatives from './ComparativesSuperlatives';
@@ -17,20 +17,43 @@ import Quiz from './Quiz';
 const App = () => {
   const [activeTab, setActiveTab] = useState('welcome');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isRightSidebarOpen, setIsRightSidebarOpen] = useState(false);
+  const [isTensesOpen, setIsTensesOpen] = useState(true);
 
+  // Menu Definition
   const leftMenuItems = [
-    { id: 'welcome', label: 'Início', icon: <Home size={20} /> },
-    { id: 'simplepast', label: 'Simple Past', icon: <History size={20} /> },
-    { id: 'pastcontinuous', label: 'Past Continuous', icon: <PlayCircle size={20} /> },
-    { id: 'pastperfect', label: 'Past Perfect', icon: <Rewind size={20} /> },
-    { id: 'presentperfect', label: 'Present Perfect', icon: <Infinity size={20} /> },
-    { id: 'presentperfectcontinuous', label: 'Pres. Perf. Cont.', icon: <Timer size={20} /> },
-    { id: 'modals', label: 'Modal Verbs', icon: <ShieldAlert size={20} /> },
-    { id: 'countable', label: 'Nouns & Quantifiers', icon: <Scale size={20} /> },
-    { id: 'frequency', label: 'Frequency Adverbs', icon: <BarChart3 size={20} /> },
-    { id: 'comparative', label: 'Comparatives', icon: <BookOpen size={20} /> },
-    { id: 'future', label: 'Future Forms', icon: <CalendarClock size={20} /> },
+    { type: 'item', id: 'welcome', label: 'Home', icon: <Home size={20} /> },
+    
+    // 1. Frequency (Basics / Present Simple context)
+    { type: 'item', id: 'frequency', label: 'Frequency Adverbs', icon: <BarChart3 size={20} /> },
+
+    // 2. Nouns (Vocabulary structure)
+    { type: 'item', id: 'countable', label: 'Nouns & Quantifiers', icon: <Scale size={20} /> },
+
+    // 3. Adjectives (Comparison)
+    { type: 'item', id: 'comparative', label: 'Comparatives', icon: <BookOpen size={20} /> },
+
+    // 4. Verb Tenses Group (Time structure)
+    { 
+      type: 'group',
+      id: 'tenses-group', 
+      label: 'Verb Tenses', 
+      icon: <Layers size={20} />,
+      isOpen: isTensesOpen,
+      toggle: () => setIsTensesOpen(!isTensesOpen),
+      items: [
+        { id: 'simplepast', label: '1. Simple Past', icon: <History size={18} /> },
+        { id: 'pastcontinuous', label: '2. Past Continuous', icon: <PlayCircle size={18} /> },
+        { id: 'presentperfect', label: '3. Present Perfect', icon: <Infinity size={18} /> },
+        { id: 'presentperfectcontinuous', label: '4. Pres. Perf. Cont.', icon: <Timer size={18} /> },
+        { id: 'pastperfect', label: '5. Past Perfect', icon: <Rewind size={18} /> },
+      ]
+    },
+
+    // 5. Future (Looking forward)
+    { type: 'item', id: 'future', label: 'Future Forms', icon: <CalendarClock size={20} /> },
+
+    // 6. Modals (Nuance & Functional)
+    { type: 'item', id: 'modals', label: 'Modal Verbs', icon: <ShieldAlert size={20} /> },
   ];
 
   const rightMenuItems = [
@@ -87,23 +110,67 @@ const App = () => {
 
         <nav className="p-4 space-y-1 overflow-y-auto flex-1 custom-scrollbar">
           <p className="px-4 text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 mt-2">Grammar Guide</p>
-          {leftMenuItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => {
-                setActiveTab(item.id);
-                setIsMobileMenuOpen(false);
-              }}
-              className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all focus:outline-none ${
-                activeTab === item.id 
-                  ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-900/20' 
-                  : 'hover:bg-slate-800 hover:text-white'
-              }`}
-            >
-              {item.icon}
-              <span className="font-medium text-sm">{item.label}</span>
-            </button>
-          ))}
+          
+          {leftMenuItems.map((item) => {
+            if (item.type === 'group') {
+              return (
+                <div key={item.id} className="mb-2 mt-2">
+                   <button
+                    onClick={item.toggle}
+                    className={`w-full flex items-center justify-between px-4 py-3 rounded-lg transition-all focus:outline-none ${
+                      item.items.some(sub => sub.id === activeTab) ? 'text-white bg-slate-800' : 'text-slate-300 hover:bg-slate-800 hover:text-white'
+                    }`}
+                  >
+                    <div className="flex items-center gap-3">
+                      {item.icon}
+                      <span className="font-medium text-sm">{item.label}</span>
+                    </div>
+                    {item.isOpen ? <ChevronDown size={16} /> : <ChevronRight size={16} />}
+                  </button>
+                  
+                  {item.isOpen && (
+                    <div className="mt-1 ml-4 space-y-1 border-l-2 border-slate-700 pl-2">
+                       {item.items.map((subItem) => (
+                          <button
+                            key={subItem.id}
+                            onClick={() => {
+                              setActiveTab(subItem.id);
+                              setIsMobileMenuOpen(false);
+                            }}
+                            className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg transition-all focus:outline-none text-sm ${
+                              activeTab === subItem.id 
+                                ? 'bg-indigo-600 text-white shadow-md' 
+                                : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
+                            }`}
+                          >
+                            {subItem.icon}
+                            <span className="font-medium">{subItem.label}</span>
+                          </button>
+                       ))}
+                    </div>
+                  )}
+                </div>
+              );
+            }
+
+            return (
+              <button
+                key={item.id}
+                onClick={() => {
+                  setActiveTab(item.id);
+                  setIsMobileMenuOpen(false);
+                }}
+                className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all focus:outline-none ${
+                  activeTab === item.id 
+                    ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-900/20' 
+                    : 'hover:bg-slate-800 hover:text-white'
+                }`}
+              >
+                {item.icon}
+                <span className="font-medium text-sm">{item.label}</span>
+              </button>
+            );
+          })}
           
           {/* Mobile Only: Show Right Menu items here too since right sidebar is hidden on mobile */}
           <div className="md:hidden mt-6 border-t border-slate-800 pt-4">
@@ -130,7 +197,7 @@ const App = () => {
 
         <div className="p-6 border-t border-slate-800 bg-slate-900 shrink-0">
           <div className="bg-slate-800 rounded-xl p-4">
-            <p className="text-xs text-slate-400 mb-2">Progresso</p>
+            <p className="text-xs text-slate-400 mb-2">Progress</p>
             <div className="w-full bg-slate-700 h-2 rounded-full overflow-hidden">
               <div className="bg-emerald-500 h-full w-3/4"></div>
             </div>
@@ -212,20 +279,20 @@ const Welcome = ({ onNavigate }) => {
   return (
     <div className="space-y-8">
       <div className="bg-gradient-to-r from-indigo-600 to-violet-600 rounded-3xl p-8 md:p-12 text-white shadow-xl shadow-indigo-200">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">Bem-vindo ao Simulador!</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">Welcome to the Simulator!</h2>
         <p className="text-indigo-100 max-w-2xl text-lg leading-relaxed">
-          Utilize o menu lateral esquerdo para estudar a gramática e o menu lateral direito (ou abaixo) para praticar com Quizzes e Listas de Verbos.
+          Use the left sidebar menu to study grammar topics and the right sidebar menu (or below) to practice with Quizzes and Verb Lists.
         </p>
         <button 
           onClick={() => onNavigate('quiz')}
           className="mt-6 bg-white text-indigo-700 px-6 py-3 rounded-full font-bold shadow-lg hover:bg-indigo-50 transition-colors flex items-center gap-2"
         >
-          <PlayCircle size={20} /> Começar Quiz
+          <PlayCircle size={20} /> Start Quiz
         </button>
       </div>
 
       <div>
-        <h3 className="text-xl font-bold text-slate-800 mb-4">Acesso Rápido</h3>
+        <h3 className="text-xl font-bold text-slate-800 mb-4">Quick Access</h3>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {cards.map((card) => (
             <button

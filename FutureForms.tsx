@@ -6,7 +6,7 @@ const FutureForms = () => {
     <div className="space-y-8 pb-12">
       <header>
         <h2 className="text-3xl font-bold text-slate-800 mb-2">Future: Will vs Going To</h2>
-        <p className="text-slate-600">A batalha dos futuros: Decisão do momento vs. Planos premeditados.</p>
+        <p className="text-slate-600">The battle of futures: Momentary decision vs. Premeditated plans.</p>
       </header>
 
       {/* Main Comparison Cards */}
@@ -16,15 +16,15 @@ const FutureForms = () => {
         <div className="bg-white rounded-2xl shadow-lg shadow-blue-900/10 overflow-hidden flex flex-col">
           <div className="p-8 bg-blue-50">
             <h3 className="text-3xl font-extrabold text-blue-600">WILL</h3>
-            <p className="text-blue-800 font-medium">O Futuro Espontâneo</p>
+            <p className="text-blue-800 font-medium">The Spontaneous Future</p>
           </div>
           <div className="p-8 flex-1 space-y-6">
             <div className="flex gap-4">
               <div className="bg-blue-100 p-3 rounded-xl h-fit text-blue-600"><Zap size={24} /></div>
               <div>
-                <h4 className="font-bold text-slate-800 text-lg">Decisão Rápida</h4>
+                <h4 className="font-bold text-slate-800 text-lg">Quick Decision</h4>
                 <p className="text-sm text-slate-600 leading-relaxed mb-2">
-                  Você decidiu AGORA, enquanto fala. Não estava na sua agenda.
+                  You decided NOW, while speaking. It was not on your schedule.
                 </p>
                 <div className="bg-slate-50 p-3 rounded-lg text-sm border-l-4 border-blue-300 italic text-slate-700">
                   "Oh, we don't have milk? I <strong>will</strong> go to the supermarket."
@@ -35,12 +35,12 @@ const FutureForms = () => {
             <div className="flex gap-4">
               <div className="bg-blue-100 p-3 rounded-xl h-fit text-blue-600"><Lightbulb size={24} /></div>
               <div>
-                <h4 className="font-bold text-slate-800 text-lg">Opinião / Previsão s/ Prova</h4>
+                <h4 className="font-bold text-slate-800 text-lg">Opinion / Prediction w/o Proof</h4>
                 <p className="text-sm text-slate-600 leading-relaxed mb-2">
-                  O que você <em>acha</em> que vai acontecer.
+                  What you <em>think</em> will happen.
                 </p>
                 <div className="bg-slate-50 p-3 rounded-lg text-sm border-l-4 border-blue-300 italic text-slate-700">
-                  "I think Brazil <strong>will</strong> win the World Cup." (Eu acho, mas não tenho certeza)
+                  "I think Brazil <strong>will</strong> win the World Cup." (I think so, but I'm not sure)
                 </div>
               </div>
             </div>
@@ -51,18 +51,18 @@ const FutureForms = () => {
         <div className="bg-white rounded-2xl shadow-lg shadow-purple-900/10 overflow-hidden flex flex-col">
           <div className="p-8 bg-purple-50">
             <h3 className="text-3xl font-extrabold text-purple-600">GOING TO</h3>
-            <p className="text-purple-800 font-medium">O Futuro Planejado</p>
+            <p className="text-purple-800 font-medium">The Planned Future</p>
           </div>
           <div className="p-8 flex-1 space-y-6">
             <div className="flex gap-4">
               <div className="bg-purple-100 p-3 rounded-xl h-fit text-purple-600"><Map size={24} /></div>
               <div>
-                <h4 className="font-bold text-slate-800 text-lg">Planos e Intenções</h4>
+                <h4 className="font-bold text-slate-800 text-lg">Plans and Intentions</h4>
                 <p className="text-sm text-slate-600 leading-relaxed mb-2">
-                  Você decidiu ANTES de falar. Já está na sua mente.
+                  You decided BEFORE speaking. It is already in your mind.
                 </p>
                 <div className="bg-slate-50 p-3 rounded-lg text-sm border-l-4 border-purple-300 italic text-slate-700">
-                  "I <strong>am going to</strong> visit my mom this weekend." (Já planejei isso ontem)
+                  "I <strong>am going to</strong> visit my mom this weekend." (I planned this yesterday)
                 </div>
               </div>
             </div>
@@ -70,12 +70,12 @@ const FutureForms = () => {
             <div className="flex gap-4">
               <div className="bg-purple-100 p-3 rounded-xl h-fit text-purple-600"><Lightbulb size={24} /></div>
               <div>
-                <h4 className="font-bold text-slate-800 text-lg">Previsão com Evidência</h4>
+                <h4 className="font-bold text-slate-800 text-lg">Prediction with Evidence</h4>
                 <p className="text-sm text-slate-600 leading-relaxed mb-2">
-                  Você está vendo algo acontecer agora. É quase certo.
+                  You are seeing something happen now. It is almost certain.
                 </p>
                 <div className="bg-slate-50 p-3 rounded-lg text-sm border-l-4 border-purple-300 italic text-slate-700">
-                  "Look at those clouds! It <strong>is going to</strong> rain." (A nuvem é a evidência)
+                  "Look at those clouds! It <strong>is going to</strong> rain." (The cloud is the evidence)
                 </div>
               </div>
             </div>
@@ -86,28 +86,28 @@ const FutureForms = () => {
       {/* Signal Words Section */}
       <section className="bg-slate-800 text-slate-200 rounded-2xl p-6 md:p-8 shadow-xl">
         <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-          <Clock className="text-amber-400" /> Palavras-Chave (Signal Words)
+          <Clock className="text-amber-400" /> Signal Words
         </h3>
-        <p className="mb-6 text-slate-400">Em testes, procure por estas palavras para te ajudar a escolher.</p>
+        <p className="mb-6 text-slate-400">In tests, look for these words to help you choose.</p>
 
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-slate-700/50 p-5 rounded-xl border border-slate-600">
-            <h4 className="text-blue-400 font-bold mb-3 uppercase tracking-wider">Use WILL com:</h4>
+            <h4 className="text-blue-400 font-bold mb-3 uppercase tracking-wider">Use WILL with:</h4>
             <ul className="space-y-2 text-sm">
-              <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-blue-400"></span> Maybe (Talvez)</li>
-              <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-blue-400"></span> Probably (Provavelmente)</li>
-              <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-blue-400"></span> I think... (Eu acho)</li>
-              <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-blue-400"></span> I hope... (Eu espero)</li>
-              <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-blue-400"></span> I promise... (Promessa)</li>
+              <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-blue-400"></span> Maybe</li>
+              <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-blue-400"></span> Probably</li>
+              <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-blue-400"></span> I think...</li>
+              <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-blue-400"></span> I hope...</li>
+              <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-blue-400"></span> I promise...</li>
             </ul>
           </div>
 
           <div className="bg-slate-700/50 p-5 rounded-xl border border-slate-600">
-            <h4 className="text-purple-400 font-bold mb-3 uppercase tracking-wider">Contextos para GOING TO:</h4>
+            <h4 className="text-purple-400 font-bold mb-3 uppercase tracking-wider">Contexts for GOING TO:</h4>
             <ul className="space-y-2 text-sm">
-              <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-purple-400"></span> "Have you decided?" (Se já decidiu &rarr; Going to)</li>
-              <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-purple-400"></span> "Look at..." (Evidência visual)</li>
-              <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-purple-400"></span> Datas específicas com planos confirmados</li>
+              <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-purple-400"></span> "Have you decided?" (If yes &rarr; Going to)</li>
+              <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-purple-400"></span> "Look at..." (Visual Evidence)</li>
+              <li className="flex items-center gap-2"><span className="w-2 h-2 rounded-full bg-purple-400"></span> Specific dates with confirmed plans</li>
             </ul>
           </div>
         </div>

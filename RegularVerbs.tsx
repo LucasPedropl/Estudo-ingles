@@ -4,39 +4,38 @@ import { Search, BookA, Volume2 } from 'lucide-react';
 const RegularVerbs = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Data transcribed from the provided image
+  // Data (Removed PT translation to strictly follow "no Portuguese" rule)
   const verbs = [
-    { infinitive: 'To Answer', past: 'Answered', participle: 'Answered', translation: 'Responder' },
-    { infinitive: 'To Ask', past: 'Asked', participle: 'Asked', translation: 'Perguntar' },
-    { infinitive: 'To Call', past: 'Called', participle: 'Called', translation: 'Chamar/Ligar' },
-    { infinitive: 'To Carry', past: 'Carried', participle: 'Carried', translation: 'Carregar' },
-    { infinitive: 'To Change', past: 'Changed', participle: 'Changed', translation: 'Mudar' },
-    { infinitive: 'To Close', past: 'Closed', participle: 'Closed', translation: 'Fechar' },
-    { infinitive: 'To Flirt', past: 'Flirted', participle: 'Flirted', translation: 'Paquerar' },
-    { infinitive: 'To Happen', past: 'Happened', participle: 'Happened', translation: 'Acontecer' },
-    { infinitive: 'To Hate', past: 'Hated', participle: 'Hated', translation: 'Odiar' },
-    { infinitive: 'To Help', past: 'Helped', participle: 'Helped', translation: 'Ajudar' },
-    { infinitive: 'To Lie', past: 'Lied', participle: 'Lied', translation: 'Mentir' },
-    { infinitive: 'To Like', past: 'Liked', participle: 'Liked', translation: 'Gostar' },
-    { infinitive: 'To Listen', past: 'Listened', participle: 'Listened', translation: 'Escutar' },
-    { infinitive: 'To Love', past: 'Loved', participle: 'Loved', translation: 'Amar' },
-    { infinitive: 'To Need', past: 'Needed', participle: 'Needed', translation: 'Precisar' },
-    { infinitive: 'To Open', past: 'Opened', participle: 'Opened', translation: 'Abrir' },
-    { infinitive: 'To Play', past: 'Played', participle: 'Played', translation: 'Jogar/Brincar' },
-    { infinitive: 'To Repeat', past: 'Repeated', participle: 'Repeated', translation: 'Repetir' },
-    { infinitive: 'To Study', past: 'Studied', participle: 'Studied', translation: 'Estudar' },
-    { infinitive: 'To Talk', past: 'Talked', participle: 'Talked', translation: 'Conversar' },
-    { infinitive: 'To Try', past: 'Tried', participle: 'Tried', translation: 'Tentar' },
-    { infinitive: 'To Walk', past: 'Walked', participle: 'Walked', translation: 'Andar' },
-    { infinitive: 'To Want', past: 'Wanted', participle: 'Wanted', translation: 'Querer' },
-    { infinitive: 'To Watch', past: 'Watched', participle: 'Watched', translation: 'Assistir' },
-    { infinitive: 'To Work', past: 'Worked', participle: 'Worked', translation: 'Trabalhar' },
+    { infinitive: 'To Answer', past: 'Answered', participle: 'Answered' },
+    { infinitive: 'To Ask', past: 'Asked', participle: 'Asked' },
+    { infinitive: 'To Call', past: 'Called', participle: 'Called' },
+    { infinitive: 'To Carry', past: 'Carried', participle: 'Carried' },
+    { infinitive: 'To Change', past: 'Changed', participle: 'Changed' },
+    { infinitive: 'To Close', past: 'Closed', participle: 'Closed' },
+    { infinitive: 'To Flirt', past: 'Flirted', participle: 'Flirted' },
+    { infinitive: 'To Happen', past: 'Happened', participle: 'Happened' },
+    { infinitive: 'To Hate', past: 'Hated', participle: 'Hated' },
+    { infinitive: 'To Help', past: 'Helped', participle: 'Helped' },
+    { infinitive: 'To Lie', past: 'Lied', participle: 'Lied' },
+    { infinitive: 'To Like', past: 'Liked', participle: 'Liked' },
+    { infinitive: 'To Listen', past: 'Listened', participle: 'Listened' },
+    { infinitive: 'To Love', past: 'Loved', participle: 'Loved' },
+    { infinitive: 'To Need', past: 'Needed', participle: 'Needed' },
+    { infinitive: 'To Open', past: 'Opened', participle: 'Opened' },
+    { infinitive: 'To Play', past: 'Played', participle: 'Played' },
+    { infinitive: 'To Repeat', past: 'Repeated', participle: 'Repeated' },
+    { infinitive: 'To Study', past: 'Studied', participle: 'Studied' },
+    { infinitive: 'To Talk', past: 'Talked', participle: 'Talked' },
+    { infinitive: 'To Try', past: 'Tried', participle: 'Tried' },
+    { infinitive: 'To Walk', past: 'Walked', participle: 'Walked' },
+    { infinitive: 'To Want', past: 'Wanted', participle: 'Wanted' },
+    { infinitive: 'To Watch', past: 'Watched', participle: 'Watched' },
+    { infinitive: 'To Work', past: 'Worked', participle: 'Worked' },
   ];
 
   const filteredVerbs = verbs.filter(verb => 
     verb.infinitive.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    verb.past.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    verb.translation.toLowerCase().includes(searchTerm.toLowerCase())
+    verb.past.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -47,7 +46,7 @@ const RegularVerbs = () => {
             <BookA className="text-emerald-500" size={32} /> Regular Verbs
           </h2>
           <p className="text-slate-600">
-            Lista de verbos regulares. Regra geral: Adicione <strong>-ED</strong> no final.
+            List of regular verbs. General Rule: Add <strong>-ED</strong> at the end.
           </p>
         </div>
         
@@ -68,10 +67,9 @@ const RegularVerbs = () => {
           <table className="w-full text-left">
             <thead>
               <tr className="bg-emerald-500 text-white">
-                <th className="p-4 font-semibold w-1/4">Present Infinitive</th>
-                <th className="p-4 font-semibold w-1/4">Past (V2)</th>
-                <th className="p-4 font-semibold w-1/4">Past Participle (V3)</th>
-                <th className="p-4 font-semibold w-1/4">Translation</th>
+                <th className="p-4 font-semibold w-1/3">Present Infinitive</th>
+                <th className="p-4 font-semibold w-1/3">Past (V2)</th>
+                <th className="p-4 font-semibold w-1/3">Past Participle (V3)</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
@@ -80,13 +78,12 @@ const RegularVerbs = () => {
                   <td className="p-4 font-medium text-slate-800">{verb.infinitive}</td>
                   <td className="p-4 text-slate-600 font-mono text-sm bg-slate-50/50">{verb.past}</td>
                   <td className="p-4 text-slate-600 font-mono text-sm">{verb.participle}</td>
-                  <td className="p-4 text-slate-500 italic text-sm">{verb.translation}</td>
                 </tr>
               ))}
               {filteredVerbs.length === 0 && (
                 <tr>
-                  <td colSpan={4} className="p-8 text-center text-slate-500">
-                    Nenhum verbo encontrado.
+                  <td colSpan={3} className="p-8 text-center text-slate-500">
+                    No verbs found.
                   </td>
                 </tr>
               )}

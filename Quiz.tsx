@@ -9,7 +9,7 @@ const questionsData = [
         question: 'Complete: "There are ___ people in the room."', 
         options: ['much', 'many', 'a little', 'any'], 
         answer: 'many', 
-        explanation: '"People" é contável (plural de person). Usamos "Many".' 
+        explanation: '"People" is countable (plural of person). We use "Many".' 
     },
     { 
         id: 102, 
@@ -17,7 +17,7 @@ const questionsData = [
         question: 'Complete: "I don\'t have ___ money."', 
         options: ['many', 'much', 'few', 'a few'], 
         answer: 'much', 
-        explanation: '"Money" é incontável. Em negativas, usamos "Much" para grande quantidade.' 
+        explanation: '"Money" is uncountable. In negatives, we use "Much" for large quantities.' 
     },
     { 
         id: 103, 
@@ -25,7 +25,7 @@ const questionsData = [
         question: 'Complete: "We have ___ time before the train leaves."', 
         options: ['few', 'little', 'many', 'a few'], 
         answer: 'little', 
-        explanation: '"Time" (tempo) é incontável. Usamos "Little" para pequena quantidade.' 
+        explanation: '"Time" is uncountable. We use "Little" for small quantities.' 
     },
     { 
         id: 104, 
@@ -33,7 +33,7 @@ const questionsData = [
         question: 'Complete: "There are a ___ jars of jam on the shelf."', 
         options: ['little', 'much', 'few', 'any'], 
         answer: 'few', 
-        explanation: '"Jars" (potes) é contável e plural. Usamos "Few".' 
+        explanation: '"Jars" is countable and plural. We use "Few".' 
     },
 
     // --- TOPIC: Frequency Adverbs ---
@@ -43,7 +43,7 @@ const questionsData = [
         question: 'Choose the correct order: "He / listens / often / to the radio"', 
         options: ['He listens often to the radio.', 'He often listens to the radio.', 'Often he listens to the radio.', 'He listens to the radio often.'], 
         answer: 'He often listens to the radio.', 
-        explanation: 'Advérbios de frequência vêm ANTES do verbo principal (listens).' 
+        explanation: 'Frequency adverbs come BEFORE the main verb (listens).' 
     },
     { 
         id: 202, 
@@ -51,7 +51,7 @@ const questionsData = [
         question: 'Choose the correct order: "She / late / arrives / always (Negative)"', 
         options: ['She doesn\'t always arrive late.', 'She always doesn\'t arrive late.', 'She doesn\'t arrive always late.', 'Always she doesn\'t arrive late.'], 
         answer: 'She doesn\'t always arrive late.', 
-        explanation: 'Na negativa, o advérbio vem entre o auxiliar (doesn\'t) e o verbo principal.' 
+        explanation: 'In negative sentences, the adverb comes between the auxiliary (doesn\'t) and the main verb.' 
     },
 
     // --- TOPIC: Comparatives & Superlatives ---
@@ -61,7 +61,7 @@ const questionsData = [
         question: 'Ferrari is ___ car in the world.', 
         options: ['the most expensive', 'more expensive', 'expensiver', 'the most expensives'], 
         answer: 'the most expensive', 
-        explanation: 'Superlativo de adjetivo longo (expensive) usa "The most". Não existe plural em adjetivos (expensives é errado).' 
+        explanation: 'Superlative of long adjectives (expensive) uses "The most". Adjectives do not have plural forms.' 
     },
     { 
         id: 302, 
@@ -69,7 +69,7 @@ const questionsData = [
         question: 'Brazil is ___ than England.', 
         options: ['hoter', 'hotter', 'more hot', 'the hottest'], 
         answer: 'hotter', 
-        explanation: 'Adjetivo curto CVC (Hot). Dobra a última letra + ER.' 
+        explanation: 'Short CVC adjective (Hot). Double the last letter + ER.' 
     },
     { 
         id: 303, 
@@ -77,7 +77,7 @@ const questionsData = [
         question: 'Equality: "Sandra is ___ Mary."', 
         options: ['as old as', 'so old as', 'older than', 'more old'], 
         answer: 'as old as', 
-        explanation: 'Comparativo de igualdade usa a estrutura "AS + adjetivo + AS".' 
+        explanation: 'Comparative of equality uses the structure "AS + adjective + AS".' 
     },
     { 
         id: 304, 
@@ -85,7 +85,7 @@ const questionsData = [
         question: 'Inferiority: "Cartoons are ___ interesting than movies."', 
         options: ['least', 'less', 'fewer', 'minor'], 
         answer: 'less', 
-        explanation: 'Comparativo de inferioridade usa "LESS + adjetivo + THAN".' 
+        explanation: 'Comparative of inferiority uses "LESS + adjective + THAN".' 
     },
 
     // --- TOPIC: Future (Will vs Going To) ---
@@ -95,7 +95,7 @@ const questionsData = [
         question: 'Look at those dark clouds! It ___.', 
         options: ['will rain', 'is going to rain', 'rains', 'rain'], 
         answer: 'is going to rain', 
-        explanation: 'Previsão com evidência visual (nuvens) exige "Going to".' 
+        explanation: 'Prediction with visual evidence (clouds) requires "Going to".' 
     },
     { 
         id: 402, 
@@ -103,7 +103,7 @@ const questionsData = [
         question: 'Mary: "I forgot the book." John: "No problem, I ___ lend you mine."', 
         options: ['am going to', 'will', 'am lending', 'lend'], 
         answer: 'will', 
-        explanation: 'Decisão espontânea feita no momento da fala (oferecer ajuda) usa "Will".' 
+        explanation: 'Spontaneous decision made at the moment of speaking requires "Will".' 
     },
     { 
         id: 403, 
@@ -111,7 +111,7 @@ const questionsData = [
         question: '"I have a plan. I ___ buy some stamps at the post office."', 
         options: ['will', 'am going to', 'buy', 'going to'], 
         answer: 'am going to', 
-        explanation: 'Intenção ou plano já decidido antes de falar usa "Going to".' 
+        explanation: 'Intention or plan decided before speaking requires "Going to".' 
     },
 
     // --- TOPIC: Simple Past (Regular/Irregular) ---
@@ -121,7 +121,7 @@ const questionsData = [
         question: 'He ___ (drink) wine at lunch yesterday.', 
         options: ['drinked', 'drank', 'drunk', 'drinks'], 
         answer: 'drank', 
-        explanation: 'Verbo irregular: Drink -> Drank.' 
+        explanation: 'Irregular verb: Drink -> Drank.' 
     },
     { 
         id: 502, 
@@ -129,7 +129,7 @@ const questionsData = [
         question: 'Negative form: "The old man broke his arm."', 
         options: ['The old man didn\'t broke his arm.', 'The old man didn\'t break his arm.', 'The old man not broke his arm.', 'The old man doesn\'t break his arm.'], 
         answer: 'The old man didn\'t break his arm.', 
-        explanation: 'Ao usar o auxiliar DIDN\'T, o verbo volta para a forma base (Break), não fica no passado (Broke).' 
+        explanation: 'When using the auxiliary DIDN\'T, the verb returns to the base form (Break), it does not stay in the past (Broke).' 
     },
 
     // --- TOPIC: Present Perfect vs Simple Past ---
@@ -139,7 +139,7 @@ const questionsData = [
         question: '___ you ever ___ a famous movie star?', 
         options: ['Did / see', 'Have / saw', 'Have / seen', 'Do / see'], 
         answer: 'Have / seen', 
-        explanation: 'Experiência de vida (Ever) sem tempo definido pede Present Perfect.' 
+        explanation: 'Life experience (Ever) without a defined time requires Present Perfect.' 
     },
     { 
         id: 602, 
@@ -147,7 +147,7 @@ const questionsData = [
         question: 'I ___ Keanu Reeves last year.', 
         options: ['have seen', 'saw', 'seen', 'see'], 
         answer: 'saw', 
-        explanation: 'Tempo específico definido ("last year") exige Simple Past.' 
+        explanation: 'Specific defined time ("last year") requires Simple Past.' 
     },
 
     // --- TOPIC: Present Perfect Continuous ---
@@ -157,7 +157,7 @@ const questionsData = [
         question: 'Gina ___ (wait) for the bus for three hours.', 
         options: ['is waiting', 'has been waiting', 'have been waiting', 'waited'], 
         answer: 'has been waiting', 
-        explanation: 'Ação que começou no passado e continua (ênfase na duração "for three hours"). Gina = Has.' 
+        explanation: 'Action that started in the past and continues (emphasis on duration "for three hours"). Gina = Has.' 
     },
 
     // --- TOPIC: Past Continuous vs Past Perfect ---
@@ -167,7 +167,7 @@ const questionsData = [
         question: 'Before I moved to London, I ___ in New York.', 
         options: ['have worked', 'worked', 'had worked', 'was working'], 
         answer: 'had worked', 
-        explanation: 'Ação que aconteceu ANTES de outra ação no passado (moved). Past Perfect (Had + V3).' 
+        explanation: 'Action that happened BEFORE another action in the past (moved). Past Perfect (Had + V3).' 
     },
     { 
         id: 802, 
@@ -175,7 +175,7 @@ const questionsData = [
         question: 'Paul ___ (read) while his sister was working.', 
         options: ['read', 'is reading', 'was reading', 'had read'], 
         answer: 'was reading', 
-        explanation: 'Ações paralelas no passado (conectadas por "While"). Ambas usam Past Continuous.' 
+        explanation: 'Parallel actions in the past (connected by "While"). Both use Past Continuous.' 
     },
 
     // --- TOPIC: Modals ---
@@ -185,7 +185,7 @@ const questionsData = [
         question: 'Advice: "You look tired. You ___ get some rest."', 
         options: ['should', 'can', 'must', 'have to'], 
         answer: 'should', 
-        explanation: '"Should" é usado para dar conselhos.' 
+        explanation: '"Should" is used to give advice.' 
     },
     { 
         id: 902, 
@@ -193,7 +193,7 @@ const questionsData = [
         question: 'Opportunity (Negative): "I\'m sorry, I ___ help you. I have to work."', 
         options: ['mustn\'t', 'shouldn\'t', 'can\'t', 'don\'t have to'], 
         answer: 'can\'t', 
-        explanation: '"Can\'t" expressa falta de habilidade ou impossibilidade/oportunidade no momento.' 
+        explanation: '"Can\'t" expresses lack of ability or impossibility/opportunity in the moment.' 
     },
 ];
 
@@ -271,9 +271,9 @@ const Quiz = () => {
                     <BrainCircuit size={64} />
                 </div>
                 <div>
-                    <h2 className="text-4xl font-bold text-slate-800 mb-2">Simulado Book 2</h2>
+                    <h2 className="text-4xl font-bold text-slate-800 mb-2">Book 2 Simulation</h2>
                     <p className="text-slate-500 max-w-md mx-auto">
-                        Baseado nas questões reais do exame. Escolha um tópico ou faça o simulado completo.
+                        Based on real exam questions. Choose a topic or take the full simulation.
                     </p>
                 </div>
 
@@ -288,7 +288,7 @@ const Quiz = () => {
                                     : 'bg-white text-slate-600 border-slate-200 hover:border-fuchsia-400 hover:text-fuchsia-600'
                             }`}
                         >
-                            {topic === 'All' ? '🔥 Simulado Completo (Mix)' : topic}
+                            {topic === 'All' ? '🔥 Full Simulation (Mix)' : topic}
                         </button>
                     ))}
                 </div>
@@ -302,10 +302,10 @@ const Quiz = () => {
         let message = '';
         let color = '';
         
-        if (percentage === 100) { message = 'Perfeito! Você destruiu o simulado!'; color='text-emerald-500'; }
-        else if (percentage >= 80) { message = 'Excelente! Quase gabaritou.'; color='text-teal-500'; }
-        else if (percentage >= 60) { message = 'Bom trabalho! Mas revise os erros.'; color='text-yellow-500'; }
-        else { message = 'Continue estudando! Use o dicionário ao lado.'; color='text-red-500'; }
+        if (percentage === 100) { message = 'Perfect! You crushed the exam!'; color='text-emerald-500'; }
+        else if (percentage >= 80) { message = 'Excellent! Almost perfect.'; color='text-teal-500'; }
+        else if (percentage >= 60) { message = 'Good job! Review your mistakes.'; color='text-yellow-500'; }
+        else { message = 'Keep studying! Use the dictionary on the sidebar.'; color='text-red-500'; }
 
         return (
             <div className="flex flex-col items-center justify-center min-h-[400px] text-center space-y-6 animate-fade-in">
@@ -314,13 +314,13 @@ const Quiz = () => {
                 </div>
                 
                 <div>
-                    <h2 className="text-3xl font-bold text-slate-800">Resultado Final</h2>
+                    <h2 className="text-3xl font-bold text-slate-800">Final Result</h2>
                     <p className="text-slate-500 mt-2 font-medium uppercase tracking-wide">{selectedTopic}</p>
                 </div>
 
                 <div className="bg-slate-900 text-white p-8 rounded-3xl min-w-[300px] shadow-xl">
                     <div className="text-6xl font-bold mb-2">{score} <span className="text-2xl text-slate-400">/ {activeQuestions.length}</span></div>
-                    <div className={`text-xl font-bold ${percentage >= 60 ? 'text-emerald-400' : 'text-red-400'}`}>{percentage}% de acerto</div>
+                    <div className={`text-xl font-bold ${percentage >= 60 ? 'text-emerald-400' : 'text-red-400'}`}>{percentage}% correct</div>
                 </div>
 
                 <p className={`font-bold text-lg ${color}`}>{message}</p>
@@ -329,7 +329,7 @@ const Quiz = () => {
                     onClick={restart}
                     className="flex items-center gap-2 bg-fuchsia-600 text-white px-8 py-4 rounded-full font-bold hover:bg-fuchsia-700 transition-colors shadow-lg shadow-fuchsia-200 hover:shadow-xl transform hover:-translate-y-1"
                 >
-                    <RotateCcw size={20} /> Tentar Novamente
+                    <RotateCcw size={20} /> Try Again
                 </button>
             </div>
         );
@@ -416,7 +416,7 @@ const Quiz = () => {
                             : <div className="p-2 bg-red-100 rounded-full text-red-600"><XCircle size={24} /></div>
                         }
                         <h4 className={`text-lg font-bold ${lastAnswerCorrect ? 'text-emerald-900' : 'text-red-900'}`}>
-                            {lastAnswerCorrect ? 'Correto!' : 'Incorreto!'}
+                            {lastAnswerCorrect ? 'Correct!' : 'Incorrect!'}
                         </h4>
                     </div>
                     
@@ -432,7 +432,7 @@ const Quiz = () => {
                             onClick={nextQuestion}
                             className="bg-slate-900 text-white px-8 py-3 rounded-xl font-bold text-sm hover:bg-slate-800 flex items-center gap-2 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1"
                         >
-                            {currentQuestionIndex + 1 === activeQuestions.length ? 'Ver Resultado' : 'Próxima Questão'} <ArrowRight size={18} />
+                            {currentQuestionIndex + 1 === activeQuestions.length ? 'See Result' : 'Next Question'} <ArrowRight size={18} />
                         </button>
                     </div>
                 </div>

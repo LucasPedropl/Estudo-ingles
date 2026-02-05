@@ -6,12 +6,12 @@ const PastPerfect = () => {
     <div className="space-y-8 pb-12">
       <header>
         <h2 className="text-3xl font-bold text-slate-800 mb-2">The Past Perfect Tense</h2>
-        <p className="text-slate-600">Conhecido como "O Passado do Passado". Usamos para falar de uma ação que aconteceu <strong>antes</strong> de outra ação no passado.</p>
+        <p className="text-slate-600">Known as "The Past of the Past". Used to talk about an action that happened <strong>before</strong> another action in the past.</p>
       </header>
 
       {/* Visual Timeline */}
       <section className="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 overflow-hidden relative">
-        <h3 className="text-center text-slate-500 uppercase tracking-widest text-xs font-bold mb-8">Linha do Tempo</h3>
+        <h3 className="text-center text-slate-500 uppercase tracking-widest text-xs font-bold mb-8">Timeline</h3>
         
         <div className="relative flex items-center justify-between max-w-3xl mx-auto pt-4 pb-8">
           {/* Line */}
@@ -55,7 +55,7 @@ const PastPerfect = () => {
       {/* The Formula */}
       <section className="bg-gradient-to-r from-violet-600 to-indigo-600 rounded-2xl p-8 text-white shadow-lg">
         <h3 className="text-2xl font-bold mb-6 text-center flex items-center justify-center gap-3">
-          <Rewind /> Estrutura
+          <Rewind /> Structure
         </h3>
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-lg md:text-xl font-mono bg-white/10 p-6 rounded-xl border border-white/20">
           <div className="flex flex-col items-center">
@@ -64,17 +64,17 @@ const PastPerfect = () => {
           </div>
           <span className="text-2xl opacity-50">+</span>
           <div className="flex flex-col items-center">
-            <span className="text-sm text-violet-200 font-sans mb-1">Auxiliar</span>
+            <span className="text-sm text-violet-200 font-sans mb-1">Auxiliary</span>
             <strong>HAD</strong>
           </div>
           <span className="text-2xl opacity-50">+</span>
           <div className="flex flex-col items-center">
-            <span className="text-sm text-violet-200 font-sans mb-1">Verbo Principal</span>
+            <span className="text-sm text-violet-200 font-sans mb-1">Main Verb</span>
             <strong>Past Participle (V3)</strong>
           </div>
         </div>
         <div className="text-center mt-4 text-violet-200 text-sm">
-          * O auxiliar <strong>HAD</strong> é igual para todas as pessoas.
+          * The auxiliary <strong>HAD</strong> is the same for all subjects.
         </div>
       </section>
 
@@ -82,47 +82,47 @@ const PastPerfect = () => {
       <div className="grid md:grid-cols-2 gap-6">
         <div className="bg-white p-6 rounded-2xl shadow-md border-l-4 border-violet-500">
           <h3 className="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
-            <Clock size={20} className="text-violet-600" /> Palavras-Chave (Connectors)
+            <Clock size={20} className="text-violet-600" /> Keywords (Connectors)
           </h3>
           <p className="text-sm text-slate-600 mb-4">
-            O Past Perfect quase sempre aparece junto com o Simple Past, conectados por:
+            Past Perfect almost always appears together with Simple Past, connected by:
           </p>
           <ul className="space-y-3 text-sm">
             <li className="flex items-start gap-2">
               <span className="font-bold text-violet-700 bg-violet-50 px-2 py-0.5 rounded">Before</span>
-              <span className="text-slate-700">Antes que algo acontecesse.</span>
+              <span className="text-slate-700">Before something happened.</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="font-bold text-violet-700 bg-violet-50 px-2 py-0.5 rounded">After</span>
-              <span className="text-slate-700">Depois que algo já tinha acontecido.</span>
+              <span className="text-slate-700">After something had already happened.</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="font-bold text-violet-700 bg-violet-50 px-2 py-0.5 rounded">By the time</span>
-              <span className="text-slate-700">"No momento em que..."</span>
+              <span className="text-slate-700">"At the moment when..."</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="font-bold text-violet-700 bg-violet-50 px-2 py-0.5 rounded">Already</span>
-              <span className="text-slate-700">Para enfatizar que já estava feito.</span>
+              <span className="text-slate-700">To emphasize that it was already done.</span>
             </li>
           </ul>
         </div>
 
         <div className="bg-white p-6 rounded-2xl shadow-md border-l-4 border-slate-500">
           <h3 className="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
-            <GitCommit size={20} className="text-slate-600" /> Comparação Prática
+            <GitCommit size={20} className="text-slate-600" /> Practical Comparison
           </h3>
           <div className="space-y-4 text-sm">
             
             <div className="p-3 bg-slate-50 rounded-lg">
-              <p className="font-bold text-slate-700 mb-1">Simple Past (Sequência)</p>
+              <p className="font-bold text-slate-700 mb-1">Simple Past (Sequence)</p>
               <p className="text-slate-600 italic">"When I got home, my mom <strong>cooked</strong> dinner."</p>
-              <p className="text-xs text-slate-500 mt-1">1º Cheguei. 2º Ela cozinhou. (Eu vi ela cozinhando)</p>
+              <p className="text-xs text-slate-500 mt-1">1st I arrived. 2nd She cooked. (I saw her cooking)</p>
             </div>
 
             <div className="p-3 bg-violet-50 rounded-lg border border-violet-100">
-              <p className="font-bold text-violet-800 mb-1">Past Perfect (Ordem Inversa)</p>
+              <p className="font-bold text-violet-800 mb-1">Past Perfect (Reverse Order)</p>
               <p className="text-slate-700 italic">"When I got home, my mom <strong>had cooked</strong> dinner."</p>
-              <p className="text-xs text-violet-600 mt-1">1º Ela cozinhou. 2º Eu cheguei. (O jantar já estava pronto)</p>
+              <p className="text-xs text-violet-600 mt-1">1st She cooked. 2nd I arrived. (Dinner was already ready)</p>
             </div>
 
           </div>

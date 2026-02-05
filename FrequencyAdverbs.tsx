@@ -6,20 +6,20 @@ const FrequencyAdverbs = () => {
     <div className="space-y-8 pb-12">
       <header>
         <h2 className="text-3xl font-bold text-slate-800 mb-2">Frequency Adverbs</h2>
-        <p className="text-slate-600">Aprenda a expressar rotina e a posição correta das palavras na frase.</p>
+        <p className="text-slate-600">Learn how to express routine and the correct position of words in a sentence.</p>
       </header>
 
       {/* Visual Scale */}
       <section className="bg-white p-6 md:p-8 rounded-2xl shadow-md">
-        <h3 className="text-lg font-bold text-slate-800 mb-6 text-center">Escala de Frequência</h3>
+        <h3 className="text-lg font-bold text-slate-800 mb-6 text-center">Frequency Scale</h3>
         <div className="space-y-4">
           {[
-            { word: 'Always', pct: '100%', color: 'bg-indigo-600', text: 'Sempre' },
-            { word: 'Usually', pct: '90%', color: 'bg-indigo-500', text: 'Geralmente' },
-            { word: 'Often', pct: '70%', color: 'bg-indigo-400', text: 'Frequentemente' },
-            { word: 'Sometimes', pct: '50%', color: 'bg-amber-400', text: 'Às vezes' },
-            { word: 'Hardly ever', pct: '10%', color: 'bg-orange-500', text: 'Quase nunca' },
-            { word: 'Never', pct: '0%', color: 'bg-red-500', text: 'Nunca' }
+            { word: 'Always', pct: '100%', color: 'bg-indigo-600', text: 'Always' },
+            { word: 'Usually', pct: '90%', color: 'bg-indigo-500', text: 'Usually' },
+            { word: 'Often', pct: '70%', color: 'bg-indigo-400', text: 'Often' },
+            { word: 'Sometimes', pct: '50%', color: 'bg-amber-400', text: 'Sometimes' },
+            { word: 'Hardly ever', pct: '10%', color: 'bg-orange-500', text: 'Hardly ever' },
+            { word: 'Never', pct: '0%', color: 'bg-red-500', text: 'Never' }
           ].map((item, idx) => (
             <div key={idx} className="flex items-center gap-4">
               <div className="w-24 font-bold text-slate-700 text-right text-sm sm:text-base">{item.word}</div>
@@ -38,10 +38,10 @@ const FrequencyAdverbs = () => {
         {/* Rule 1: Action Verbs */}
         <div className="bg-blue-50 p-6 rounded-2xl shadow-sm">
           <h3 className="text-lg font-bold text-blue-900 mb-4 flex items-center gap-2">
-            <Activity size={20} /> Regra Fundamental 1
+            <Activity size={20} /> Fundamental Rule 1
           </h3>
           <p className="text-blue-800 mb-4 text-sm">
-            Para a maioria dos verbos (study, work, eat, play), o advérbio vem <strong>ANTES</strong>.
+            For most verbs (study, work, eat, play), the adverb comes <strong>BEFORE</strong> the verb.
           </p>
           <div className="bg-white p-4 rounded-xl shadow-sm text-center mb-4 text-slate-700">
              Subject + <span className="text-blue-600 font-bold">Adverb</span> + Verb
@@ -56,10 +56,10 @@ const FrequencyAdverbs = () => {
         {/* Rule 2: To Be */}
         <div className="bg-indigo-50 p-6 rounded-2xl shadow-sm">
           <h3 className="text-lg font-bold text-indigo-900 mb-4 flex items-center gap-2">
-            <Activity size={20} /> Regra Fundamental 2
+            <Activity size={20} /> Fundamental Rule 2
           </h3>
           <p className="text-indigo-800 mb-4 text-sm">
-            Para o verbo <strong>TO BE</strong> (am, is, are), o advérbio vem <strong>DEPOIS</strong>.
+            For the verb <strong>TO BE</strong> (am, is, are), the adverb comes <strong>AFTER</strong> the verb.
           </p>
           <div className="bg-white p-4 rounded-xl shadow-sm text-center mb-4 text-slate-700">
              Subject + To Be + <span className="text-indigo-600 font-bold">Adverb</span>
@@ -76,25 +76,25 @@ const FrequencyAdverbs = () => {
       <div className="bg-white rounded-2xl shadow-md overflow-hidden">
         <div className="bg-slate-900 text-white p-4 flex items-center gap-2">
           <HelpCircle size={20} className="text-amber-400" />
-          <h3 className="font-bold">Atenção: Perguntas e Negativas</h3>
+          <h3 className="font-bold">Attention: Questions & Negatives</h3>
         </div>
         <div className="p-6 grid md:grid-cols-2 gap-8">
           
           <div>
-            <h4 className="font-bold text-slate-800 mb-2 border-b border-slate-100 pb-2">Frases Negativas</h4>
-            <p className="text-sm text-slate-600 mb-3">O advérbio fica entre o auxiliar negativo (don't/doesn't) e o verbo principal.</p>
+            <h4 className="font-bold text-slate-800 mb-2 border-b border-slate-100 pb-2">Negative Sentences</h4>
+            <p className="text-sm text-slate-600 mb-3">The adverb goes between the negative auxiliary (don't/doesn't) and the main verb.</p>
             <div className="bg-slate-50 p-3 rounded-lg text-sm border-l-4 border-red-400">
-              <p className="mb-1 text-slate-500 text-xs uppercase font-bold">Estrutura</p>
+              <p className="mb-1 text-slate-500 text-xs uppercase font-bold">Structure</p>
               <p>Subject + Don't/Doesn't + <span className="text-red-500 font-bold">Adverb</span> + Verb</p>
             </div>
             <p className="mt-3 text-sm italic text-slate-700">"I don't <strong className="text-red-500">usually</strong> have breakfast."</p>
           </div>
 
           <div>
-            <h4 className="font-bold text-slate-800 mb-2 border-b border-slate-100 pb-2">Frases Interrogativas</h4>
-            <p className="text-sm text-slate-600 mb-3">O advérbio fica logo depois do sujeito.</p>
+            <h4 className="font-bold text-slate-800 mb-2 border-b border-slate-100 pb-2">Interrogative Sentences</h4>
+            <p className="text-sm text-slate-600 mb-3">The adverb goes right after the subject.</p>
             <div className="bg-slate-50 p-3 rounded-lg text-sm border-l-4 border-amber-400">
-              <p className="mb-1 text-slate-500 text-xs uppercase font-bold">Estrutura</p>
+              <p className="mb-1 text-slate-500 text-xs uppercase font-bold">Structure</p>
               <p>Do/Does + Subject + <span className="text-amber-600 font-bold">Adverb</span> + Verb?</p>
             </div>
             <p className="mt-3 text-sm italic text-slate-700">"Do you <strong className="text-amber-600">often</strong> go to the cinema?"</p>
@@ -106,10 +106,10 @@ const FrequencyAdverbs = () => {
       {/* Special Cases */}
       <div className="bg-amber-50 p-6 rounded-2xl shadow-sm">
         <h3 className="text-lg font-bold text-amber-900 mb-2 flex items-center gap-2">
-          <AlertOctagon size={20} /> Exceções de Posição
+          <AlertOctagon size={20} /> Position Exceptions
         </h3>
         <p className="text-slate-700 text-sm">
-          <strong>Sometimes</strong> e <strong>Usually</strong> são flexíveis. Eles podem ir no começo da frase para dar ênfase.
+          <strong>Sometimes</strong> and <strong>Usually</strong> are flexible. They can go at the beginning of the sentence for emphasis.
         </p>
         <div className="mt-3 flex flex-wrap gap-4 text-sm font-medium text-amber-900">
           <span className="bg-white px-3 py-1 rounded shadow-sm">"Sometimes I watch TV."</span>
@@ -117,7 +117,7 @@ const FrequencyAdverbs = () => {
           <span className="bg-white px-3 py-1 rounded shadow-sm">"I sometimes watch TV."</span>
         </div>
         <p className="mt-3 text-slate-700 text-sm">
-          Mas <strong className="text-red-600">Never</strong> e <strong className="text-red-600">Always</strong> não gostam de ir no começo!
+          But <strong className="text-red-600">Never</strong> and <strong className="text-red-600">Always</strong> do not like to be at the beginning!
         </p>
       </div>
 

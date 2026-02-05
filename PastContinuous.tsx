@@ -6,13 +6,13 @@ const PastContinuous = () => {
     <div className="space-y-8 pb-12">
       <header>
         <h2 className="text-3xl font-bold text-slate-800 mb-2">The Past Continuous Tense</h2>
-        <p className="text-slate-600">Usado para descrever uma ação que estava <strong>em progresso</strong> em um momento específico do passado.</p>
+        <p className="text-slate-600">Used to describe an action that was <strong>in progress</strong> at a specific moment in the past.</p>
       </header>
 
       {/* The Formula */}
       <section className="bg-white rounded-2xl p-6 shadow-md border-t-4 border-orange-500">
         <h3 className="text-xl font-bold mb-4 flex items-center gap-2 text-slate-800">
-          <PlayCircle className="text-orange-500" /> A Fórmula
+          <PlayCircle className="text-orange-500" /> The Formula
         </h3>
         <div className="flex flex-wrap items-center justify-center gap-2 text-lg font-mono bg-orange-50 p-6 rounded-xl text-slate-800">
           <span className="font-bold">Subject</span>
@@ -35,10 +35,10 @@ const PastContinuous = () => {
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 text-white shadow-xl relative overflow-hidden">
         <div className="relative z-10">
           <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
-            <Zap className="text-yellow-400" /> A Interrupção
+            <Zap className="text-yellow-400" /> The Interruption
           </h3>
           <p className="text-slate-300 mb-8 max-w-2xl">
-            O uso mais comum em testes: Uma ação longa (Continuous) é interrompida por uma ação curta (Simple Past).
+            Most common use in tests: A long action (Continuous) is interrupted by a short action (Simple Past).
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -71,9 +71,9 @@ const PastContinuous = () => {
       {/* When vs While */}
       <div className="grid md:grid-cols-2 gap-6">
         <div className="bg-indigo-50 p-6 rounded-2xl shadow-sm border border-indigo-100">
-          <h3 className="text-lg font-bold text-indigo-900 mb-2">WHEN (Quando)</h3>
+          <h3 className="text-lg font-bold text-indigo-900 mb-2">WHEN</h3>
           <p className="text-indigo-800 text-sm mb-4">
-            Geralmente introduz a <strong>ação curta</strong> (Simple Past).
+            Usually introduces the <strong>short action</strong> (Simple Past).
           </p>
           <div className="bg-white p-3 rounded-lg text-sm text-slate-700 shadow-sm">
             "... <strong>when</strong> you called."
@@ -83,9 +83,9 @@ const PastContinuous = () => {
         </div>
 
         <div className="bg-orange-50 p-6 rounded-2xl shadow-sm border border-orange-100">
-          <h3 className="text-lg font-bold text-orange-900 mb-2">WHILE (Enquanto)</h3>
+          <h3 className="text-lg font-bold text-orange-900 mb-2">WHILE</h3>
           <p className="text-orange-800 text-sm mb-4">
-            Geralmente introduz a <strong>ação longa</strong> (Past Continuous).
+            Usually introduces the <strong>long action</strong> (Past Continuous).
           </p>
           <div className="bg-white p-3 rounded-lg text-sm text-slate-700 shadow-sm">
             "<strong>While</strong> I was studying..."
@@ -98,10 +98,10 @@ const PastContinuous = () => {
       {/* Parallel Actions */}
       <section className="bg-white p-6 rounded-2xl shadow-md">
         <h3 className="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
-          <Layers size={20} className="text-indigo-500" /> Ações Paralelas
+          <Layers size={20} className="text-indigo-500" /> Parallel Actions
         </h3>
         <p className="text-sm text-slate-600 mb-4">
-          Duas coisas acontecendo ao mesmo tempo no passado. Ninguém interrompe ninguém.
+          Two things happening at the same time in the past. No one interrupts anyone.
         </p>
         <div className="flex flex-col sm:flex-row items-center gap-4 bg-slate-50 p-4 rounded-xl">
           <div className="flex-1 text-center">

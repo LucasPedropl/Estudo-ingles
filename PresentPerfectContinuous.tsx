@@ -6,7 +6,7 @@ const PresentPerfectContinuous = () => {
     <div className="space-y-8 pb-12">
       <header>
         <h2 className="text-3xl font-bold text-slate-800 mb-2">Present Perfect Continuous</h2>
-        <p className="text-slate-600">Ações que começaram no passado e continuam até agora, com ênfase na <strong>duração</strong> ou no <strong>processo</strong>.</p>
+        <p className="text-slate-600">Actions that started in the past and continue until now, emphasizing <strong>duration</strong> or the <strong>process</strong>.</p>
       </header>
 
       {/* The Formula */}
@@ -14,7 +14,7 @@ const PresentPerfectContinuous = () => {
         <div className="absolute top-0 right-0 opacity-10 transform translate-x-1/4 -translate-y-1/4">
           <Timer size={200} />
         </div>
-        <h3 className="text-2xl font-bold mb-6 text-center relative z-10">A Estrutura do Processo</h3>
+        <h3 className="text-2xl font-bold mb-6 text-center relative z-10">The Process Structure</h3>
         <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 text-lg md:text-xl font-mono bg-white/10 p-6 rounded-xl border border-white/20 relative z-10">
           <div className="flex flex-col items-center">
             <span className="text-sm text-cyan-200 font-sans mb-1">Subject</span>
@@ -44,26 +44,26 @@ const PresentPerfectContinuous = () => {
         
         <div className="bg-white p-6 rounded-2xl shadow-md border-l-4 border-cyan-500">
           <h3 className="text-lg font-bold text-slate-800 mb-3 flex items-center gap-2">
-            <Timer className="text-cyan-600" size={24} /> 1. Duração até o Agora
+            <Timer className="text-cyan-600" size={24} /> 1. Duration until Now
           </h3>
           <p className="text-slate-600 text-sm mb-4">
-            Uma ação que começou no passado e <strong>ainda está acontecendo</strong> neste exato momento.
+            An action that started in the past and is <strong>still happening</strong> right now.
           </p>
           <div className="bg-cyan-50 p-4 rounded-xl text-cyan-900 font-medium text-sm space-y-2">
-            <p>✅ "We <strong>have been studying</strong> English for 2 hours." (Ainda estamos estudando)</p>
-            <p>✅ "It <strong>has been raining</strong> since this morning." (Ainda chove)</p>
+            <p>✅ "We <strong>have been studying</strong> English for 2 hours." (We are still studying)</p>
+            <p>✅ "It <strong>has been raining</strong> since this morning." (It is still raining)</p>
           </div>
         </div>
 
         <div className="bg-white p-6 rounded-2xl shadow-md border-l-4 border-blue-500">
           <h3 className="text-lg font-bold text-slate-800 mb-3 flex items-center gap-2">
-            <Activity className="text-blue-600" size={24} /> 2. Efeitos Recentes Visíveis
+            <Activity className="text-blue-600" size={24} /> 2. Recent Visible Effects
           </h3>
           <p className="text-slate-600 text-sm mb-4">
-            A ação acabou de parar, mas você pode ver o <strong>resultado físico</strong> agora.
+            The action just stopped, but you can see the <strong>physical result</strong> now.
           </p>
           <div className="bg-blue-50 p-4 rounded-xl text-blue-900 font-medium text-sm space-y-2">
-            <p>✅ "I'm tired because I <strong>have been running</strong>." (Estou suado/cansado agora)</p>
+            <p>✅ "I'm tired because I <strong>have been running</strong>." (I am sweaty/tired now)</p>
             <p>✅ "The ground is wet. It <strong>has been raining</strong>."</p>
           </div>
         </div>
@@ -72,33 +72,33 @@ const PresentPerfectContinuous = () => {
       {/* Comparison Table: Simple vs Continuous */}
       <section className="bg-slate-900 text-slate-300 rounded-2xl p-6 md:p-8 shadow-xl">
         <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-          <Zap className="text-yellow-400" /> Batalha: Simple vs. Continuous
+          <Zap className="text-yellow-400" /> Battle: Simple vs. Continuous
         </h3>
         
         <div className="grid md:grid-cols-2 gap-8">
           <div className="space-y-4">
             <div className="bg-slate-800 p-4 rounded-xl border border-slate-700">
               <h4 className="text-teal-400 font-bold mb-2">Present Perfect Simple</h4>
-              <p className="text-xs uppercase tracking-wider text-slate-500 mb-2">Foco no Resultado / Quantidade</p>
+              <p className="text-xs uppercase tracking-wider text-slate-500 mb-2">Focus on Result / Quantity</p>
               <p className="text-white text-lg font-medium">"I have written 3 emails."</p>
-              <p className="text-sm text-slate-400 mt-2">A ação acabou. O foco é que os emails estão prontos.</p>
+              <p className="text-sm text-slate-400 mt-2">The action is finished. The focus is that the emails are done.</p>
             </div>
             <ul className="text-sm space-y-1 text-slate-400">
-              <li>• Quantas vezes? (How many)</li>
-              <li>• Coisas permanentes</li>
+              <li>• How many times?</li>
+              <li>• Permanent things</li>
             </ul>
           </div>
 
           <div className="space-y-4">
             <div className="bg-slate-800 p-4 rounded-xl border border-slate-700">
               <h4 className="text-cyan-400 font-bold mb-2">Present Perfect Continuous</h4>
-              <p className="text-xs uppercase tracking-wider text-slate-500 mb-2">Foco na Atividade / Tempo</p>
+              <p className="text-xs uppercase tracking-wider text-slate-500 mb-2">Focus on Activity / Time</p>
               <p className="text-white text-lg font-medium">"I have been writing emails."</p>
-              <p className="text-sm text-slate-400 mt-2">A ação é o foco. Talvez eu não tenha terminado ainda.</p>
+              <p className="text-sm text-slate-400 mt-2">The action is the focus. Maybe I haven't finished yet.</p>
             </div>
             <ul className="text-sm space-y-1 text-slate-400">
-              <li>• Quanto tempo? (How long)</li>
-              <li>• Coisas temporárias</li>
+              <li>• How long?</li>
+              <li>• Temporary things</li>
             </ul>
           </div>
         </div>
@@ -111,15 +111,15 @@ const PresentPerfectContinuous = () => {
             <AlertTriangle size={24} />
           </div>
           <div>
-            <h3 className="text-xl font-bold text-rose-800 mb-2">Cuidado: Verbos de Estado (Stative Verbs)</h3>
+            <h3 className="text-xl font-bold text-rose-800 mb-2">Warning: Stative Verbs</h3>
             <p className="text-rose-700 mb-4">
-              Verbos que indicam sentimentos, posse ou conhecimento <strong>NÃO</strong> costumam ser usados no Continuous (com -ING).
-              <br/>Use o <strong>Present Perfect Simple</strong> com eles.
+              Verbs that indicate feelings, possession, or knowledge are <strong>NOT</strong> usually used in Continuous (with -ING).
+              <br/>Use <strong>Present Perfect Simple</strong> with them.
             </p>
             
             <div className="grid md:grid-cols-2 gap-4">
               <div className="bg-white p-4 rounded-xl shadow-sm">
-                <p className="text-xs text-slate-500 uppercase font-bold mb-2">Know (Conhecer)</p>
+                <p className="text-xs text-slate-500 uppercase font-bold mb-2">Know</p>
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-green-600 text-sm">
                     <CheckCircle2 size={16} /> "I <strong>have known</strong> him for years."
@@ -131,7 +131,7 @@ const PresentPerfectContinuous = () => {
               </div>
 
               <div className="bg-white p-4 rounded-xl shadow-sm">
-                <p className="text-xs text-slate-500 uppercase font-bold mb-2">Like (Gostar)</p>
+                <p className="text-xs text-slate-500 uppercase font-bold mb-2">Like</p>
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-green-600 text-sm">
                     <CheckCircle2 size={16} /> "I <strong>have always liked</strong> pizza."
@@ -144,7 +144,7 @@ const PresentPerfectContinuous = () => {
             </div>
 
             <div className="mt-4 text-sm text-rose-800 italic bg-rose-100/50 p-3 rounded-lg">
-              Outros verbos perigosos: Believe, Belong, Hate, Understand, Want, Need.
+              Other dangerous verbs: Believe, Belong, Hate, Understand, Want, Need.
             </div>
           </div>
         </div>

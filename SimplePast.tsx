@@ -6,7 +6,7 @@ const SimplePast = () => {
     <div className="space-y-8 pb-12">
       <header>
         <h2 className="text-3xl font-bold text-slate-800 mb-2">The Simple Past Tense</h2>
-        <p className="text-slate-600">Ações completas que aconteceram e terminaram no passado. Não há conexão com o agora.</p>
+        <p className="text-slate-600">Completed actions that happened and finished in the past. There is no connection to the now.</p>
       </header>
 
       {/* Regular vs Irregular Intro */}
@@ -17,7 +17,7 @@ const SimplePast = () => {
             <h3 className="text-xl font-bold text-slate-800">Regular Verbs</h3>
           </div>
           <p className="text-slate-600 text-sm mb-4">
-            A maioria dos verbos segue a regra padrão: basta adicionar <strong>-ED</strong> ao final.
+            Most verbs follow the standard rule: simply add <strong>-ED</strong> to the end.
           </p>
           <div className="space-y-2">
             <div className="flex justify-between p-2 bg-indigo-50 rounded-lg text-sm">
@@ -38,7 +38,7 @@ const SimplePast = () => {
             <h3 className="text-xl font-bold text-slate-800">Irregular Verbs</h3>
           </div>
           <p className="text-slate-600 text-sm mb-4">
-            Estes verbos são rebeldes! Eles mudam de forma completamente ou não mudam nada. Você precisa memorizá-los.
+            These verbs are rebels! They change shape completely or don't change at all. You need to memorize them.
           </p>
           <div className="space-y-2">
             <div className="flex justify-between p-2 bg-rose-50 rounded-lg text-sm">
@@ -58,12 +58,12 @@ const SimplePast = () => {
       <section className="bg-white rounded-2xl shadow-md overflow-hidden">
         <div className="bg-slate-50 p-4 border-b border-slate-100 flex items-center gap-2">
           <PenTool size={20} className="text-slate-500" />
-          <h3 className="font-bold text-slate-800">Regras de Ortografia (Regular Verbs)</h3>
+          <h3 className="font-bold text-slate-800">Spelling Rules (Regular Verbs)</h3>
         </div>
         <div className="p-6 grid md:grid-cols-3 gap-6">
           <div>
-            <h4 className="font-bold text-indigo-600 mb-2">Terminados em E</h4>
-            <p className="text-xs text-slate-500 mb-2">Só adicione o D.</p>
+            <h4 className="font-bold text-indigo-600 mb-2">Ending in E</h4>
+            <p className="text-xs text-slate-500 mb-2">Just add D.</p>
             <ul className="text-sm space-y-1 text-slate-700">
               <li>Like → <strong>Liked</strong></li>
               <li>Love → <strong>Loved</strong></li>
@@ -71,8 +71,8 @@ const SimplePast = () => {
             </ul>
           </div>
           <div>
-            <h4 className="font-bold text-indigo-600 mb-2">Consoante + Y</h4>
-            <p className="text-xs text-slate-500 mb-2">Tira o Y, coloca IED.</p>
+            <h4 className="font-bold text-indigo-600 mb-2">Consonant + Y</h4>
+            <p className="text-xs text-slate-500 mb-2">Remove Y, add IED.</p>
             <ul className="text-sm space-y-1 text-slate-700">
               <li>Study → <strong>Studied</strong></li>
               <li>Cry → <strong>Cried</strong></li>
@@ -80,8 +80,8 @@ const SimplePast = () => {
             </ul>
           </div>
           <div>
-            <h4 className="font-bold text-indigo-600 mb-2">CVC (Sanduíche)</h4>
-            <p className="text-xs text-slate-500 mb-2">Dobra a última letra + ED.</p>
+            <h4 className="font-bold text-indigo-600 mb-2">CVC (Sandwich)</h4>
+            <p className="text-xs text-slate-500 mb-2">Double the last letter + ED.</p>
             <ul className="text-sm space-y-1 text-slate-700">
               <li>Stop → <strong>Stopped</strong></li>
               <li>Plan → <strong>Planned</strong></li>
@@ -95,19 +95,19 @@ const SimplePast = () => {
       <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 text-white shadow-xl">
         <div className="flex items-center gap-3 mb-6">
           <AlertTriangle className="text-amber-400" size={32} />
-          <h3 className="text-2xl font-bold">A Regra de Ouro do "DID"</h3>
+          <h3 className="text-2xl font-bold">The Golden Rule of "DID"</h3>
         </div>
         
         <p className="text-slate-300 mb-8 text-lg leading-relaxed">
-          Quando usamos o auxiliar <strong>DID</strong> (em negativas e perguntas), ele "rouba" o passado do verbo principal. 
-          O verbo volta para a forma normal (Base Form).
+          When we use the auxiliary <strong>DID</strong> (in negatives and questions), it "steals" the past tense from the main verb. 
+          The verb returns to its Base Form.
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* Negatives */}
           <div className="bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/10">
             <h4 className="text-rose-400 font-bold text-lg mb-4 flex items-center gap-2">
-              <XCircle size={20} /> Negativas
+              <XCircle size={20} /> Negatives
             </h4>
             <div className="text-center mb-4 font-mono bg-black/30 p-3 rounded-lg text-sm">
               Subject + <strong>didn't</strong> + Base Verb
@@ -131,7 +131,7 @@ const SimplePast = () => {
           {/* Questions */}
           <div className="bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/10">
             <h4 className="text-amber-400 font-bold text-lg mb-4 flex items-center gap-2">
-              <History size={20} /> Perguntas
+              <History size={20} /> Questions
             </h4>
             <div className="text-center mb-4 font-mono bg-black/30 p-3 rounded-lg text-sm">
               <strong>Did</strong> + Subject + Base Verb?
@@ -153,9 +153,9 @@ const SimplePast = () => {
 
       {/* Was / Were Exception */}
       <div className="bg-blue-50 p-6 md:p-8 rounded-2xl shadow-sm">
-        <h3 className="text-xl font-bold text-blue-900 mb-4">A Exceção: O Verbo "To Be" (Ser/Estar)</h3>
+        <h3 className="text-xl font-bold text-blue-900 mb-4">The Exception: "To Be" (Was/Were)</h3>
         <p className="text-blue-800 mb-6 text-sm">
-          O verbo To Be é especial. Ele <strong>NÃO</strong> usa "Did" para negativas ou perguntas. Ele se resolve sozinho.
+          The verb To Be is special. It <strong>DOES NOT</strong> use "Did" for negatives or questions. It handles itself.
         </p>
         
         <div className="grid md:grid-cols-2 gap-6">
@@ -184,10 +184,10 @@ const SimplePast = () => {
       {/* Time Expressions */}
       <section className="bg-white p-6 rounded-2xl shadow-md">
         <h3 className="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
-          <Calendar size={20} className="text-indigo-600" /> Marcadores de Tempo
+          <Calendar size={20} className="text-indigo-600" /> Time Markers
         </h3>
         <p className="text-sm text-slate-600 mb-4">
-          Estas palavras geralmente aparecem no final da frase e indicam que devemos usar o Past Simple.
+          These words usually appear at the end of the sentence and indicate that we should use Past Simple.
         </p>
         <div className="flex flex-wrap gap-3">
           <span className="bg-indigo-50 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium">Yesterday</span>
