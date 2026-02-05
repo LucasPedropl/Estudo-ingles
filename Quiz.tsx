@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrainCircuit, CheckCircle2, XCircle, ArrowRight, RotateCcw, Trophy, Play, HelpCircle } from 'lucide-react';
+import { BrainCircuit, CheckCircle2, XCircle, ArrowRight, RotateCcw, Trophy, Play, HelpCircle, Layers, Zap } from 'lucide-react';
 
 const questionsData = [
     // --- TOPIC: Quantifiers (Much/Many/Little/Few) ---
@@ -113,6 +113,30 @@ const questionsData = [
         answer: 'am going to', 
         explanation: 'Intention or plan decided before speaking requires "Going to".' 
     },
+    { 
+        id: 404, 
+        topic: 'Future Forms', 
+        question: 'Phone rings. "I ___ get it!"', 
+        options: ['am going to', 'am getting', 'will', 'go to'], 
+        answer: 'will', 
+        explanation: 'Instant decision made at the moment of speaking = WILL.' 
+    },
+    { 
+        id: 405, 
+        topic: 'Future Forms', 
+        question: 'Arrangement: "I ___ my dentist tomorrow at 10 AM."', 
+        options: ['will see', 'am seeing', 'see', 'going to see'], 
+        answer: 'am seeing', 
+        explanation: 'Fixed arrangement with a specific time in the future uses Present Continuous.' 
+    },
+    { 
+        id: 406, 
+        topic: 'Future Forms', 
+        question: 'Timetable: "The train ___ at 6:00 PM."', 
+        options: ['leaving', 'is going to leave', 'leaves', 'will leave'], 
+        answer: 'leaves', 
+        explanation: 'Official schedules (timetables) use Present Simple.' 
+    },
 
     // --- TOPIC: Simple Past (Regular/Irregular) ---
     { 
@@ -129,7 +153,23 @@ const questionsData = [
         question: 'Negative form: "The old man broke his arm."', 
         options: ['The old man didn\'t broke his arm.', 'The old man didn\'t break his arm.', 'The old man not broke his arm.', 'The old man doesn\'t break his arm.'], 
         answer: 'The old man didn\'t break his arm.', 
-        explanation: 'When using the auxiliary DIDN\'T, the verb returns to the base form (Break), it does not stay in the past (Broke).' 
+        explanation: 'When using the auxiliary DIDN\'T, the verb returns to the base form (Break).' 
+    },
+    { 
+        id: 503, 
+        topic: 'Simple Past', 
+        question: '___ you at home last night?', 
+        options: ['Did', 'Were', 'Was', 'Are'], 
+        answer: 'Were', 
+        explanation: 'Verb To Be (Were) does not use "Did". You = Were.' 
+    },
+    { 
+        id: 504, 
+        topic: 'Simple Past', 
+        question: 'I ___ (not/go) to the party last Saturday.', 
+        options: ['didn\'t went', 'didn\'t go', 'not went', 'don\'t went'], 
+        answer: 'didn\'t go', 
+        explanation: 'Negative in Simple Past: Didn\'t + Base Verb (Go).' 
     },
 
     // --- TOPIC: Present Perfect vs Simple Past ---
@@ -149,6 +189,30 @@ const questionsData = [
         answer: 'saw', 
         explanation: 'Specific defined time ("last year") requires Simple Past.' 
     },
+    { 
+        id: 603, 
+        topic: 'Pres. Perf. vs Past', 
+        question: 'Shakespeare ___ many famous plays.', 
+        options: ['has written', 'wrote', 'had written', 'was writing'], 
+        answer: 'wrote', 
+        explanation: 'Shakespeare is dead. The time period is finished. Simple Past.' 
+    },
+    { 
+        id: 604, 
+        topic: 'Pres. Perf. vs Past', 
+        question: 'I ___ my keys! I can\'t open the door.', 
+        options: ['lost', 'have lost', 'lose', 'was losing'], 
+        answer: 'have lost', 
+        explanation: 'Recent past with a consequence in the present (can\'t open door). Present Perfect.' 
+    },
+    { 
+        id: 605, 
+        topic: 'Pres. Perf. vs Past', 
+        question: 'She ___ (live) in London since 2010.', 
+        options: ['lived', 'lives', 'has lived', 'is living'], 
+        answer: 'has lived', 
+        explanation: 'Action started in the past and continuing now (Since). Present Perfect.' 
+    },
 
     // --- TOPIC: Present Perfect Continuous ---
     { 
@@ -157,7 +221,23 @@ const questionsData = [
         question: 'Gina ___ (wait) for the bus for three hours.', 
         options: ['is waiting', 'has been waiting', 'have been waiting', 'waited'], 
         answer: 'has been waiting', 
-        explanation: 'Action that started in the past and continues (emphasis on duration "for three hours"). Gina = Has.' 
+        explanation: 'Action started in past and continues (emphasis on duration). Gina = Has.' 
+    },
+    { 
+        id: 702, 
+        topic: 'Perf. Continuous', 
+        question: 'Look at the ground! It is wet. It ___.', 
+        options: ['rained', 'has been raining', 'is raining', 'was raining'], 
+        answer: 'has been raining', 
+        explanation: 'Visible evidence of a recent continuous activity.' 
+    },
+    { 
+        id: 703, 
+        topic: 'Perf. Continuous', 
+        question: 'WARNING: I ___ (know) him for years.', 
+        options: ['have been knowing', 'have known', 'knew', 'am knowing'], 
+        answer: 'have known', 
+        explanation: 'Stative Verb (Know) usually cannot be continuous. Use Present Perfect Simple.' 
     },
 
     // --- TOPIC: Past Continuous vs Past Perfect ---
@@ -167,7 +247,7 @@ const questionsData = [
         question: 'Before I moved to London, I ___ in New York.', 
         options: ['have worked', 'worked', 'had worked', 'was working'], 
         answer: 'had worked', 
-        explanation: 'Action that happened BEFORE another action in the past (moved). Past Perfect (Had + V3).' 
+        explanation: 'Action happening BEFORE another past action (moved). Past Perfect.' 
     },
     { 
         id: 802, 
@@ -175,7 +255,23 @@ const questionsData = [
         question: 'Paul ___ (read) while his sister was working.', 
         options: ['read', 'is reading', 'was reading', 'had read'], 
         answer: 'was reading', 
-        explanation: 'Parallel actions in the past (connected by "While"). Both use Past Continuous.' 
+        explanation: 'Parallel actions in the past (While). Past Continuous.' 
+    },
+    { 
+        id: 803, 
+        topic: 'Past Tenses Mix', 
+        question: 'I ___ (sleep) when the phone rang.', 
+        options: ['slept', 'am sleeping', 'was sleeping', 'had slept'], 
+        answer: 'was sleeping', 
+        explanation: 'Long action (sleeping) interrupted by short action (rang).' 
+    },
+    { 
+        id: 804, 
+        topic: 'Past Tenses Mix', 
+        question: 'When we arrived at the cinema, the film ___ (already/start).', 
+        options: ['started', 'was starting', 'had already started', 'has started'], 
+        answer: 'had already started', 
+        explanation: 'The film started BEFORE we arrived. Past Perfect.' 
     },
 
     // --- TOPIC: Modals ---
@@ -193,7 +289,23 @@ const questionsData = [
         question: 'Opportunity (Negative): "I\'m sorry, I ___ help you. I have to work."', 
         options: ['mustn\'t', 'shouldn\'t', 'can\'t', 'don\'t have to'], 
         answer: 'can\'t', 
-        explanation: '"Can\'t" expresses lack of ability or impossibility/opportunity in the moment.' 
+        explanation: '"Can\'t" expresses lack of ability or opportunity in the moment.' 
+    },
+    { 
+        id: 903, 
+        topic: 'Modal Verbs', 
+        question: 'Strong Deduction: "He has a Ferrari. He ___ be rich!"', 
+        options: ['must', 'can', 'should', 'would'], 
+        answer: 'must', 
+        explanation: 'Logical deduction (95% certainty) uses "Must".' 
+    },
+    { 
+        id: 904, 
+        topic: 'Modal Verbs', 
+        question: 'Prohibition: "You ___ smoke in the hospital."', 
+        options: ['don\'t have to', 'mustn\'t', 'shouldn\'t', 'couldn\'t'], 
+        answer: 'mustn\'t', 
+        explanation: 'Mustn\'t indicates something is strictly prohibited.' 
     },
 ];
 
@@ -238,6 +350,21 @@ const Quiz = () => {
         setGameState('playing');
     };
 
+    const startTenseChallenge = () => {
+        const tenseTopics = ['Future Forms', 'Simple Past', 'Pres. Perf. vs Past', 'Perf. Continuous', 'Past Tenses Mix'];
+        let filtered = questionsData.filter(q => tenseTopics.includes(q.topic));
+        filtered = filtered.sort(() => Math.random() - 0.5);
+        
+        setActiveQuestions(filtered);
+        setSelectedTopic("Ultimate Verb Tense Challenge");
+        setCurrentQuestionIndex(0);
+        setScore(0);
+        setLastAnswerCorrect(null);
+        setShowExplanation(false);
+        setSelectedOption(null);
+        setGameState('playing');
+    }
+
     const handleAnswer = (option) => {
         const currentQ = activeQuestions[currentQuestionIndex];
         const isCorrect = option === currentQ.answer;
@@ -277,20 +404,33 @@ const Quiz = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-4xl px-4">
-                    {topics.map(topic => (
-                        <button
-                            key={topic}
-                            onClick={() => startQuiz(topic)}
-                            className={`p-4 rounded-xl border-2 font-bold transition-all transform hover:-translate-y-1 hover:shadow-md ${
-                                topic === 'All' 
-                                    ? 'bg-fuchsia-600 text-white border-fuchsia-600 shadow-lg hover:bg-fuchsia-700 col-span-1 sm:col-span-2 lg:col-span-3 text-lg' 
-                                    : 'bg-white text-slate-600 border-slate-200 hover:border-fuchsia-400 hover:text-fuchsia-600'
-                            }`}
-                        >
-                            {topic === 'All' ? '🔥 Full Simulation (Mix)' : topic}
-                        </button>
-                    ))}
+                <div className="w-full max-w-4xl px-4 flex flex-col items-center gap-4">
+                     {/* SPECIAL BUTTON */}
+                     <button
+                        onClick={startTenseChallenge}
+                        className="w-full md:w-2/3 p-5 rounded-xl border-2 font-bold transition-all transform hover:-translate-y-1 hover:shadow-xl bg-gradient-to-r from-violet-600 to-indigo-600 text-white border-transparent shadow-lg text-lg flex items-center justify-center gap-3"
+                    >
+                        <Zap className="text-yellow-300" />
+                        ⚔️ Ultimate Verb Tense Challenge
+                    </button>
+
+                    <div className="w-full h-px bg-slate-200 my-2"></div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
+                        {topics.map(topic => (
+                            <button
+                                key={topic}
+                                onClick={() => startQuiz(topic)}
+                                className={`p-4 rounded-xl border-2 font-bold transition-all transform hover:-translate-y-1 hover:shadow-md ${
+                                    topic === 'All' 
+                                        ? 'bg-fuchsia-600 text-white border-fuchsia-600 shadow-lg hover:bg-fuchsia-700 col-span-1 sm:col-span-2 lg:col-span-3 text-lg' 
+                                        : 'bg-white text-slate-600 border-slate-200 hover:border-fuchsia-400 hover:text-fuchsia-600'
+                                }`}
+                            >
+                                {topic === 'All' ? '🔥 Mix Everything (All Topics)' : topic}
+                            </button>
+                        ))}
+                    </div>
                 </div>
             </div>
         );
